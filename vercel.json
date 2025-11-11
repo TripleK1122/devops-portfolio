@@ -1,14 +1,31 @@
 {
+    "version": 2,
     "builds": [
         {
-            "src": "vite.config.js",
-            "use": "@vercel/static-build"
+            "src": "index.html",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
         }
     ],
-    "routes": [
+    "headers": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-store, must-revalidate"
+                },
+                {
+                    "key": "Pragma",
+                    "value": "no-cache"
+                },
+                {
+                    "key": "Expires",
+                    "value": "0"
+                }
+            ]
         }
     ]
 }
