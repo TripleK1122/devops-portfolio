@@ -3,8 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  root: ".",
   build: {
-    outDir: "dist",
+    outDir: 'dist',
   },
+  publicDir: 'public',
+  root: '.',
+  appType: 'spa',
+  rollupOptions: {
+    input: './index.html'
+  }
 })
