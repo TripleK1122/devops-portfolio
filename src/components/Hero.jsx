@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import profile from "../assets/profile.jpeg";
 
 export default function Hero() {
@@ -43,19 +44,22 @@ export default function Hero() {
                 AWS | Terraform | CI/CD (GitHub Actions) | Docker | K8s | Python | Linux
             </p>
 
-            {/* Кнопка */}
+            {/* Кнопка со smooth scroll */}
             <motion.div
                 className="flex gap-6 justify-center mt-4"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
             >
-                <a
-                    href="#contact"
-                    className="border border-[#00C3FF] px-5 py-2 rounded-lg text-[#00C3FF] hover:bg-[#00C3FF] hover:text-black transition"
+                <Link
+                    to="contact"
+                    smooth={true}
+                    duration={700}
+                    offset={-60}
+                    className="border border-[#00C3FF] px-5 py-2 rounded-lg text-[#00C3FF] hover:bg-[#00C3FF] hover:text-black transition cursor-pointer"
                 >
                     Contact Me
-                </a>
+                </Link>
             </motion.div>
         </motion.section>
     );

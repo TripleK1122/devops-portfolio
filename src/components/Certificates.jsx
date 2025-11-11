@@ -9,7 +9,7 @@ export default function Certificates() {
             id: "AWS05126345",
         },
         {
-            title: "AWS Certified Solutions Architect – Associate",
+            title: "AWS Certified Solutions Architect Associate",
             year: "2025",
             id: "AWS05126345",
         },

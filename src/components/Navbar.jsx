@@ -29,16 +29,18 @@ export default function Navbar() {
                 <ul className="flex gap-8 text-white text-sm">
                     {[
                         { to: "hero", label: "Home" },
-                        { to: "tech", label: "Technologies" },
-                        { to: "certs", label: "Certificates" },
+                        { to: "technologies", label: "Technologies" },
+                        { to: "certificates", label: "Certificates" },
                         { to: "contact", label: "Contact" },
-                    ].map((item, i) => (
+                    ].map((item, i) => (  // ✅ точка убрана
                         <li key={i}>
                             <Link
+                                activeClass="text-[#00C3FF]"
                                 to={item.to}
+                                spy={true}
                                 smooth={true}
                                 duration={700}
-                                offset={-60}
+                                offset={-70}
                                 className="cursor-pointer hover:text-[#00C3FF] transition-all"
                             >
                                 {item.label}
