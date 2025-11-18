@@ -53,12 +53,13 @@ export default function Contact() {
                 transition={{ delay: 0.3, duration: 0.6 }}
             >
                 <a
-                    href="/cv.pdf" // позже заменим на реальный путь
+                    href="/Kostya_Kostin_Resume.pdf"
                     download
-                    className="border border-[#00C3FF] px-6 py-2 rounded-lg text-[#00C3FF] hover:bg-[#00C3FF] hover:text-black transition-all duration-300"
+                    className="border border-[#00C3FF] px-6 py-2 rounded-lg text-[#00C3FF] hover:bg-[#00C3FF] hover:text-black transition"
                 >
                     Download CV
                 </a>
+
             </motion.div>
 
             {/* Новый футер */}
@@ -70,6 +71,6 @@ export default function Contact() {
             >
                 © 2025 Kostiantyn Kostin — DevOps Engineer
             </motion.div>
-        </footer>
+        </footer >
     );
 }
