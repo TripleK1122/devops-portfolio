@@ -1,66 +1,64 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function Timeline() {
-    const timeline = [
+export default function HowIWork() {
+    const principles = [
         {
-            year: "2020 – 2024",
-            title: "Massage Therapist, Private Practice",
+            title: "System First Thinking",
             description:
-                "Built and managed a successful massage business focused on quality and client experience. Introduced online scheduling and digital tracking — this inspired my passion for process automation and technology.",
+                "I start by understanding the system as a whole — its constraints, dependencies, and failure points — before proposing solutions.",
         },
         {
-            year: "2024 – 2025",
-            title: "Transition to IT & DevOps",
+            title: "Automation by Default",
             description:
-                "Began structured learning in Linux, AWS, and Terraform. Completed hands-on projects deploying infrastructure, CI/CD pipelines, and automation tools.",
+                "Anything that repeats gets automated. This reduces errors, saves time, and keeps systems predictable.",
         },
         {
-            year: "2025 – Present",
-            title: "DevOps Engineer (Freelance / Projects)",
+            title: "Simplicity Over Complexity",
             description:
-                "Designing and automating AWS cloud environments using Terraform, Docker, and GitHub Actions. Building a full DevOps portfolio and cost-optimized cloud projects.",
+                "I prefer clear, maintainable solutions over clever but fragile designs.",
+        },
+        {
+            title: "Infrastructure as Code",
+            description:
+                "All infrastructure is defined, versioned, and reviewed as code to ensure consistency and reproducibility.",
+        },
+        {
+            title: "Reliability and Cost Awareness",
+            description:
+                "I design systems with monitoring, recovery, and cost efficiency in mind from the beginning.",
         },
     ];
 
     return (
-        <section id="timeline" className="bg-black text-white py-16 px-6">
+        <section id="how-i-work" className="bg-black text-white py-16 px-6">
             <motion.h2
                 className="text-3xl font-bold text-[#00C3FF] text-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                Career Timeline
+                How I Work
             </motion.h2>
 
-            <div className="relative max-w-3xl mx-auto pl-10">
-                {/* Вертикальная линия */}
-                <div className="absolute left-3 top-0 h-full w-[2px] bg-[#00C3FF]/40" />
-
-                {timeline.map((item, index) => (
+            <div className="max-w-3xl mx-auto space-y-10">
+                {principles.map((item, index) => (
                     <motion.div
                         key={index}
-                        className="relative mb-12"
+                        className="relative pl-6"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        transition={{ duration: 0.5, delay: index * 0.15 }}
                     >
-                        {/* Точка */}
-                        <span className="absolute left-1 top-[6px] w-4 h-4 bg-[#00C3FF] rounded-full border-2 border-black shadow-[0_0_8px_#00C3FF]" />
+                        {/* Акцентная линия */}
+                        <span className="absolute left-0 top-1 h-full w-[2px] bg-[#00C3FF]/40" />
 
-                        {/* Контент */}
-                        <div className="ml-8">
-                            <h3 className="text-lg font-semibold text-white mb-1">
-                                {item.year}
-                            </h3>
-                            <h4 className="text-[#00C3FF] font-medium mb-2">
-                                {item.title}
-                            </h4>
-                            <p className="text-gray-300 text-sm leading-relaxed">
-                                {item.description}
-                            </p>
-                        </div>
+                        <h3 className="text-lg font-semibold text-white mb-2">
+                            {item.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                            {item.description}
+                        </p>
                     </motion.div>
                 ))}
             </div>
