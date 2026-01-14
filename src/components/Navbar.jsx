@@ -32,7 +32,7 @@ export default function Navbar() {
                         { to: "technologies", label: "Technologies" },
                         { to: "certificates", label: "Certificates" },
                         { to: "contact", label: "Contact" },
-                    ].map((item, i) => (  // ✅ точка убрана
+                    ].map((item, i) => (  // 
                         <li key={i}>
                             <Link
                                 activeClass="text-[#00C3FF]"

@@ -53,7 +53,7 @@ export default function Contact() {
                 transition={{ delay: 0.3, duration: 0.6 }}
             >
                 <a
-                    href="/Kostya_Kostin_Resume.pdf"
+                    href="/Kostya K (1).pdf"
                     download
                     className="border border-[#00C3FF] px-6 py-2 rounded-lg text-[#00C3FF] hover:bg-[#00C3FF] hover:text-black transition"
                 >
