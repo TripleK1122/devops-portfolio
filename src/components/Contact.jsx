@@ -69,7 +69,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
             >
-                © 2025 Kostiantyn Kostin — DevOps Engineer
+                © 2026 Kostiantyn Kostin — DevOps Engineer
             </motion.div>
         </footer >
     );
