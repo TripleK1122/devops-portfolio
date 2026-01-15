@@ -27,7 +27,7 @@ export default function Contact() {
                 </motion.a>
 
                 <motion.a
-                    href="https://linkedin.com/in/your-profile"
+                    href="https://www.linkedin.com/in/kostinkk/"
                     whileHover={{ scale: 1.2, color: "#00C3FF" }}
                     transition={{ type: "spring", stiffness: 200 }}
                     className="text-4xl text-white hover:text-[#00C3FF] transition"
@@ -53,7 +53,7 @@ export default function Contact() {
                 transition={{ delay: 0.3, duration: 0.6 }}
             >
                 <a
-                    href="/Kostya K (1).pdf"
+                    href="KostinResume.pdf"
                     download
                     className="border border-[#00C3FF] px-6 py-2 rounded-lg text-[#00C3FF] hover:bg-[#00C3FF] hover:text-black transition"
                 >
